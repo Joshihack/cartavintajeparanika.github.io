@@ -1,0 +1,107 @@
+/* Estilo base para cualquier navegador y dispositivo */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: 16px;
+    font-family: 'Segoe UI', 'Helvetica Neue', 'Times New Roman', Times, serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Fondo responsivo */
+body {
+    background-image: url('https://i.pinimg.com/736x/4a/9e/e7/4a9ee7a72bf1f96cc4c36f9cefa157c8.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Carta central */
+.carta {
+    background: rgba(190, 158, 121, 0.95);
+    border: 2px solid #8B4513;
+    border-radius: 1rem;
+    padding: 2rem;
+    max-width: 90%;
+    width: 100%;
+    max-height: 90vh;
+    text-align: justify;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    animation: slideIn 1.5s ease-in-out;
+    transition: transform 0.4s ease, background 0.4s ease;
+}
+
+/* Hover elegante */
+.carta:hover {
+    transform: scale(1.01);
+    background: rgba(190, 158, 121, 1);
+}
+
+/* Título estilizado */
+.carta h1 {
+    text-align: center;
+    color: #4d7c0f;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    animation: textFadeIn 2s ease-in-out;
+}
+
+/* Párrafos */
+.carta p {
+    margin-bottom: 1rem;
+    color: #333;
+    text-indent: 2rem;
+    animation: textFadeIn 2s ease-in-out;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes textFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+    .carta {
+        padding: 1.5rem;
+        font-size: 1rem;
+    }
+
+    .carta h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .carta {
+        padding: 1rem;
+        font-size: 0.95rem;
+    }
+
+    .carta h1 {
+        font-size: 1.3rem;
+    }
+}

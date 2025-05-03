@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta para Nika 🥑</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .carta {
+            user-select: none; /* Deshabilita la selección de texto solo en la carta */
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelector('.carta').addEventListener('copy', function(e) {
+                e.preventDefault();
+                alert('Copiar texto está deshabilitado.');
+            });
+        });
+
+        function playMusic() {
+            var audio = document.getElementById('musica');
+            if (audio.paused) {
+                audio.play();
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Reproductor de música invisible -->
+    <audio id="musica" src="vida.mp3" autoplay loop></audio>
+    
+    <div class="carta no-copy">
+        <h1>Querida Andrea</h1>
+
+        <p>
+            Desde lo más profundo de mi corazón, siento la necesidad de decirte lo mucho que me gustas y lo importante que te estás volviendo para mí. No se trata solo de una atracción pasajera, es algo que va creciendo con cada palabra que compartimos, con cada sonrisa tuya, con cada momento en que nos acercamos más.
+        </p>
+
+        <p>
+            Me encantaría tener algo bonito contigo. Algo real, sincero, sin prisas, pero con todo el corazón. No se trata de prometer perfección, porque no soy perfecto, pero sí puedo prometerte que estoy haciendo todo lo posible por ser una mejor persona. Por mí, pero también por ti. Porque tú inspiras eso en mí: ser alguien más consciente, más estable, menos cambiante, como tú dijiste.
+        </p>
+
+        <p>
+            Tu manera de ser me atrapa, Andrea🥑. Tu risa, tu mirada, tu forma única de ver el mundo… todo eso me encanta. Estar contigo me hace sentir que vale la pena apostar por algo verdadero. Y aunque a veces me cueste expresar lo que siento con claridad, quiero que sepas que esto va en serio.
+        </p>
+
+        <p>
+            No sé qué pasará más adelante, pero sí sé que quiero intentarlo contigo, Que me haces mucha ilusión, que me importas, y que quiero cuidarte y hacerte sentir especial, como realmente mereces.
+        </p>
+
+        <p>
+            Y no te voy a mentir, cuento los días para poder verte, para abrazarte como a nadie, para que ese momento se quede grabado en mí como uno de los más bonitos, Solo de pensarlo me dibuja una sonrisa tonta, pero real.
+        </p>
+
+        <p>
+            Gracias por existir, por ser tan tú, por dejarme conocerte. Ojalá me des la oportunidad de construir algo hermoso a tu lado.
+        </p>
+
+        <p>Con todo mi cariño,</p>
+        <p><strong>Joshi</strong></p>
+    </div>
+</body>
+</html>
